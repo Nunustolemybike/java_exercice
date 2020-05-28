@@ -1,3 +1,7 @@
+import junit.framework.*;
+
+import static org.junit.Assert.assertTrue;
+
 package main;
 
 public class main {
@@ -17,4 +21,12 @@ public class main {
         public SommeArgent add(SommeArgent m) {
             return new SommeArgent(getQuantite()+m.getQuantite(), getUnite());
         }
-}
+        public boolean equals(Object anObject){
+            SommeArgent S= new SommeArgent(5,"euros");
+            int quantite=S.getQuantite();
+            String unite=S.getUnite();
+            assertTrue(quantite==5);
+        }
+    }
+
+    }
